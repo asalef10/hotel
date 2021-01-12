@@ -1,0 +1,135 @@
+#conteiner{
+    display: grid;
+    grid-template-areas: 'header header header  header'
+                         'nav    nav    nav     nav   '
+                        'section section section section'
+                        'article article article article'
+                        'footer  footer footer  footer'
+                        'end     end    end      end';
+gap: 60px;
+text-align: center;
+/* background-color: rgb(180, 205, 90); */
+
+
+}
+.header h1{
+    color: rgb(26, 17, 17);
+    border-style: inset;
+    background-color: azure;
+    opacity: 0.7;
+    
+}
+
+.header{
+    grid-area: header;
+    text-align: center;
+    background-image: url(big\ dubai.jpeg);
+    background-size: 49%;
+    height: 367px;
+    background-size: cover;
+    transition: 2s linear;
+}
+.header:hover{
+    background-image: url(dubai13.jpg);
+    background-size: 50%;
+}
+.nav{
+    grid-area: nav;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    animation: ph 2s ;
+    position: relative;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes ph{
+    0%{left:0px; top:0px;}
+        25%{left: 80px; top: 0px;}
+        50%{left:80px; top:100px;}
+        75%{left:0px; top:100px;}
+        100%{left:0px; top: 0px;}
+}
+.nav:hover{
+    animation-play-state: paused;
+}
+ul{
+    /* display: inline-block; */
+    display:flex;
+    flex-wrap: wrap;
+    border-style: double;
+    font-size: x-large;
+    list-style: none;
+    
+
+
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+
+#section{
+    grid-area: section;
+    /* width: 1161px; */
+    /* height: 116px; */
+}
+#footer{
+    grid-area: footer;
+    border-style: outset;
+    background-color: darkgrey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.end{
+    grid-area: end;
+    
+}
+
+#massge{
+    grid-area: massge;
+}
+#article{
+    grid-area: article;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content: space-between; */
+
+}
+.img1{
+        width: 387px;
+        border-style: inset; 
+        filter :drop-shadow(-26px -14px 23px rgb(13, 15, 15))
+        
+        /* transition: all 3s ; */
+
+}
+.img1:hover{
+    font-size: x-large;
+    /* transform: rotateY(280deg); */
+
+}
+
+body{
+    background-color:  white;
+ 
+    
+}
+
+    
+}
+#article,
+#massge,
+.header,
+#section,
+#footer{
+     border-style: dotted; 
+     color: rgb(233, 10, 10); 
+    padding: 10px;
+} 

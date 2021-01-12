@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.tamplate.css">
+</head>
+
+<body>
+    <div id="conteiner">
+        <header class="header">
+            <h1>Welcome to Fairmont The Palm Hotel</h1>
+        </header>
+        <nav class="nav">
+            <ul>
+               <a href="#"> <li> <br>Home page<br> </li></a>
+               <a href="#"> <li> <br>Contact Us<br> </li></a>
+               <a href="#" ><li> <br>Room reservations<br> </li></a>
+            </ul>
+        </nav>
+
+        <section id="section">
+            <h2>Fairmont The Palm </h2>
+
+            <p>
+                Fairmont The Palm is an idyllic five-star resort situated on Dubai’s most sought-after island community,
+                Palm Jumeirah. A luxury beachfront resort with unrivalled <br>views of the Arabian Gulf and glittering
+                Dubai
+                Marina skyline, the city’s major attractions and airports are all located within easy reach, setting the
+                resort apart as a unique leisure and business destination.</p>
+
+        </section>
+        <article id="article">
+            <div class="img1"> <img src="dubai2.jpg">
+                <h3>Fairmont Gold Suite </h3>
+                <p>Room Description
+                    Contemporary decor and everyday functionality are highlighted by distinctive Arabian architectural
+                    accents to deliver an elegantly appointed suite with unrestricted views over the Dubai Marina
+                    skyline,
+                    Arabian Gulf and resort gardens.</p>
+            </div>
+            <div class="img1"><img src="/dubai3.jpg">
+                <h3>Stay On Us, UAE Residents Offer</h3>
+                <p>Room Description
+                    Spectacular sweeping views of the Arabian Gulf and Dubai Marina skyline from a prime higher floor
+                    location immediately confer an ambience of luxurious exclusivity, enhanced by a wealth of
+                    exceptional
+                    in-room amenities.
+                </p>
+            </div>
+            <div class="img1">
+                <img src="dubai4.jpg">
+                <h3>Office With A View</h3>
+                <p> Make Fairmont The Palm your "office" for the day from AED 399. So are you ready to work by the
+                    beach? </p>
+            </div>
+            <div class="img1">
+                <img src="/dubi5.jpg">
+                <h3>ReConnect - Lifestyle Membership</h3>
+                <p>Featuring access to a private beach with Dubai Marina skyline views, four temperature-controlled
+                    pools and discounts on dining, spa treatments, fitness classes, Fairmont The Palm is the urban
+                    retreat you’ve always wanted to be a part of for a limited time offer of AED 4,900 only:</p>
+            </div>
+            <div class="img1">
+                <img src="dubai8.jpg">
+                <h3>Water Sports in Fairmont The Palm</h3>
+                <p>From water skiing, wake boarding and kayaking, to paddle boarding and sailing, swap the sedentary
+                    life for a water-based experience with an exciting selection of sporting activities to try from our
+                    800 meters of private white sand beach.</p>
+            </div>
+            <div class="img1">
+                <img src="dubai9.jpg">
+                <h3>Yoga</h3>
+                <p>Step into our yoga studio for an intense and uplifting yoga class or get together with friends and
+                    step outdoors to take in the serenity of our private beach blanketed with the radiance of the full
+                    moon. Our yoga gurus will guide you to a state of inner peace and absolute agility.</p>
+            </div>
+        </article>
+        <!-- <div id="massge">
+            <h3>Contact Us</h3>
+            <img src="dubai10.webp"> -->
+        <!-- </div> -->
+        <footer id="footer">
+            <iframe width="50%" height="500px" src="https://www.youtube.com/embed/IdejM6wCkxA" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="50%" height="500px" src="https://www.youtube.com/embed/URdMXJqfpVA" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </footer>
+            <div class="end">
+                All material on this site is owned by © 2005 - 2020 Agoda Company Pte. Ltd., all rights reserved.
+                Agoda is part of Booking Holdings Inc., the world leader in online travel & related services.
+            </div>
+
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+#conteiner{
+    display: grid;
+    grid-template-areas: 'header header header  header'
+                         'nav    nav    nav     nav   '
+                        'section section section section'
+                        'article article article article'
+                        'footer  footer footer  footer'
+                        'end     end    end      end';
+gap: 60px;
+text-align: center;
+/* background-color: rgb(180, 205, 90); */
+
+
+}
+.header h1{
+    color: rgb(26, 17, 17);
+    border-style: inset;
+    background-color: azure;
+    opacity: 0.7;
+    
+}
+
+.header{
+    grid-area: header;
+    text-align: center;
+    background-image: url(big\ dubai.jpeg);
+    background-size: 49%;
+    height: 367px;
+    background-size: cover;
+    transition: 2s linear;
+}
+.header:hover{
+    background-image: url(dubai13.jpg);
+    background-size: 50%;
+}
+.nav{
+    grid-area: nav;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    animation: ph 2s ;
+    position: relative;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes ph{
+    0%{left:0px; top:0px;}
+        25%{left: 80px; top: 0px;}
+        50%{left:80px; top:100px;}
+        75%{left:0px; top:100px;}
+        100%{left:0px; top: 0px;}
+}
+.nav:hover{
+    animation-play-state: paused;
+}
+ul{
+    /* display: inline-block; */
+    display:flex;
+    flex-wrap: wrap;
+    border-style: double;
+    font-size: x-large;
+    list-style: none;
+    
+
+
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+
+#section{
+    grid-area: section;
+    /* width: 1161px; */
+    /* height: 116px; */
+}
+#footer{
+    grid-area: footer;
+    border-style: outset;
+    background-color: darkgrey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.end{
+    grid-area: end;
+    
+}
+
+#massge{
+    grid-area: massge;
+}
+#article{
+    grid-area: article;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content: space-between; */
+
+}
+.img1{
+        width: 387px;
+        border-style: inset; 
+        filter :drop-shadow(-26px -14px 23px rgb(13, 15, 15))
+        
+        /* transition: all 3s ; */
+
+}
+.img1:hover{
+    font-size: x-large;
+    /* transform: rotateY(280deg); */
+
+}
+
+body{
+    background-color:  white;
+ 
+    
+}
+
+    
+}
+#article,
+#massge,
+.header,
+#section,
+#footer{
+     border-style: dotted; 
+     color: rgb(233, 10, 10); 
+    padding: 10px;
+} 
