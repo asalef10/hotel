@@ -24,15 +24,17 @@ text-align: center;
     grid-area: header;
     text-align: center;
     background-image: url(big\ dubai.jpeg);
-    background-size: 49%;
-    height: 367px;
+    height: 60vh;
+    background-size: cover;
     background-size: cover;
     transition: 2s linear;
 }
-.header:hover{
-    background-image: url(dubai13.jpg);
-    background-size: 50%;
-}
+/* .header:hover{
+    background-image: url();
+    background-size: 10vh;
+    height: 60vh;
+    background-size: cover;
+} */
 .nav{
     grid-area: nav;
     display:flex;
@@ -133,3 +135,14 @@ body{
      color: rgb(233, 10, 10); 
     padding: 10px;
 } 
+/* @media (max-width:600px;)
+{
+    #conteiner{
+        display: grid;
+        grid-template-areas: 'header header '
+                             'nav    nav'
+                            'section section'
+                            ' article article';
+                            
+    gap: 60px;
+} */
